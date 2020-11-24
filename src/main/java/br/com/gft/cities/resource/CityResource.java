@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.gft.cities.City;
+import br.com.gft.cities.entities.City;
 import br.com.gft.cities.repository.CityRepository;
 
 @RestController
