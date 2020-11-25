@@ -29,7 +29,7 @@ COMMENT ON COLUMN public.cidade.cod_tom
   IS 'Código TOM (SEFAZ)';
   
 
-ALTER TABLE public.cidade OWNER TO postgres;
+-- ALTER TABLE public.cidade OWNER TO postgres;
 
 --
 -- Name: cidade_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
