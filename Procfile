@@ -1,1 +1,1 @@
-web: java -jar -Dspring.profiles.active=heroku target/classes:target/dependency/cities-api-0.0.1-SNAPSHOT.jar
+web: java -jar -Dspring.profiles.active=heroku target/classes:target/dependency/* br.com.gft.ConsultaCidadesApplication
