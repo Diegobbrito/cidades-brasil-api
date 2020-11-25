@@ -1,1 +1,1 @@
-web: java -jar -Dspring.profiles.active=heroku target/classes:target/dependency/* br.com.gft.ConsultaCidadesApplication
+web: java $JAVA_OPTS -cp -D spring.profiles.active=heroku target/classes:target/dependency/* br.com.gft.ConsultaCidadesApplication
