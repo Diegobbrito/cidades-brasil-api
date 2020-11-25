@@ -1,13 +1,12 @@
-package br.com.gft.cities.distances;
+package br.com.gft.cities.resource;
 
+import br.com.gft.cities.service.DistanceService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import br.com.gft.cities.distances.service.DistanceService;
 
 @RestController
 @RequestMapping("/distances")

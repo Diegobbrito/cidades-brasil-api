@@ -1,18 +1,27 @@
 
-DROP TABLE IF EXISTS `pais`;
-CREATE TABLE `pais` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(60) DEFAULT NULL,
-  `nome_pt` varchar(60) DEFAULT NULL,
-  `sigla` varchar(2) DEFAULT NULL,
-  `bacen` int(5) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Países e Nações';
+DROP TABLE IF EXISTS "pais" CASCADE;
+CREATE TABLE pais (
+  id       bigserial NOT NULL,
+  nome     varchar(60),
+  nome_pt  varchar(60),
+  sigla     varchar(2),
+  bacen    integer,
+  /* Keys */
+  CONSTRAINT pais_pkey
+    PRIMARY KEY (id)
+);
+
+COMMENT ON TABLE pais
+  IS 'Países e Nações';
+
+COMMENT ON COLUMN pais.sigla
+  IS 'ISO 3166-1 Alpha2';
 
 --
 -- Inserindo dados na tabela "pais"
 --
 
-INSERT INTO `pais` (`id`, `nome`, `nome_pt`, `sigla`, `bacen`) VALUES
+INSERT INTO "pais" (id, nome, nome_pt, sigla, bacen) VALUES
 (1, 'Brazil', 'Brasil', 'BR', 1058),
 (2, 'Afghanistan', 'Afeganistão', 'AF', 132),
 (3, 'Albania', 'Albânia, Republica da', 'AL', 175),
@@ -259,14 +268,12 @@ INSERT INTO `pais` (`id`, `nome`, `nome_pt`, `sigla`, `bacen`) VALUES
 (249, 'Zona del Canal de Panamá', 'Zona do Canal do Panamá', NULL, 8958),
 (252, 'Dawlat Filasṭīn', 'Palestina', 'PS', 5780),
 (253, 'Åland Islands', 'Aland, Ilhas', 'AX', 153),
+(254, 'Saint Barthélemy', 'Coletividade de São Bartolomeu', 'BL', 3598),
 (255, 'Curaçao', 'Curaçao', 'CW', 200),
-(256, 'Saint Martin', 'São Martinho, Ilha de (Parte Holandesa)', 'SM', 6998),
+(256, 'Saint Martin', 'São Martinho, Ilha de (Parte Francesa)', 'SM', 6980),
 (258, 'Bonaire', 'Bonaire', 'AN', 990),
 (259, 'Antartica', 'Antartica', 'AQ', 420),
 (260, 'Heard Island and McDonald Islands', 'Ilha Herad e Ilhas Macdonald', 'AU', 3433),
 (261, 'Saint-Barthélemy', 'São Bartolomeu', 'FR', 6939),
-(262, 'Saint Martin', 'São Martinho, Ilha de (Parte Francesa)', 'SM', 6980),
+(262, 'Saint Martin', 'São Martinho, Ilha de (Parte Holandesa)', 'SM', 6998),
 (263, 'Terres Australes et Antarctiques Françaises', 'Terras Austrais e Antárcticas Francesas', 'TF', 7811);
-
-ALTER TABLE `pais`
-  ADD PRIMARY KEY (`id`);

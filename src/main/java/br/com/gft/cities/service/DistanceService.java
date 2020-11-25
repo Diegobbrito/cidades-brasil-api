@@ -1,4 +1,4 @@
-package br.com.gft.cities.distances.service;
+package br.com.gft.cities.service;
 
 import static java.lang.Math.atan2;
 import static java.lang.Math.cos;
